@@ -3,6 +3,8 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link'
 import Image from 'next/image'
+import Alert from "../components/alert";
+
 export default function Home() {
   return (
     <Layout home>
@@ -10,6 +12,8 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+
+        <Alert>
         <p>Hello world next js</p>
         <p>
           <Link href={"other-page"}>Other page</Link>
@@ -21,6 +25,7 @@ export default function Home() {
             alt="Morgan Lee"
           />
         </p>
+        </Alert>
       </section>
     </Layout>
   );
